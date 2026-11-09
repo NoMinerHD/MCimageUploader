@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bild auf Minecraft-Karte hochladen</title>
+  <script src="/upload.js" defer></script>
+  <style>
+    html { color-scheme: light dark; }
+    body { max-width: 36rem; margin: 10vh auto; padding: 0 1rem; font: 1rem/1.5 system-ui, sans-serif; }
+    form { display: grid; gap: 1rem; }
+    input, button { font: inherit; }
+    button { justify-self: start; padding: .5rem .8rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Bild auf deine Karte laden</h1>
+    <p>Wähle ein PNG oder JPG bis 2 MiB. Das Bild darf höchstens 4.096 Pixel pro Seite und insgesamt 8 Millionen Pixel haben.</p>
+    <form id="upload">
+      <label for="image">Bilddatei</label>
+      <input id="image" type="file" accept=".png,.jpg,.jpeg,image/png,image/jpeg" required>
+      <button type="submit" disabled>Hochladen</button>
+    </form>
+    <p id="status" role="status"></p>
+    <noscript>Für den Upload muss JavaScript aktiviert sein.</noscript>
+  </main>
+</body>
+</html>
